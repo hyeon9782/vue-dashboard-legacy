@@ -1,5 +1,32 @@
-<script setup lang="ts"></script>
+<script lang="ts">
+import ArticleList from '../components/article/ArticleList.vue'
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name: 'HomeView',
+  components: {
+    ArticleList
+  },
+  data() {
+    return {
+      articles: [
+        {
+          id: 1,
+          title: '첫 번째 게시글',
+          content: '안녕하세요, Vue 3와 TypeScript를 사용한 게시글 목록입니다.'
+        },
+        {
+          id: 2,
+          title: '두 번째 게시글',
+          content: '이 컴포넌트는 ArticleList 컴포넌트와 ArticleItem 컴포넌트로 구성됩니다.'
+        }
+      ]
+    }
+  }
+})
+</script>
 
 <template>
-  <main></main>
+  <main>
+    <article-list :articles="articles" />
+  </main>
 </template>
