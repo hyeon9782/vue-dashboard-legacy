@@ -1,10 +1,10 @@
 <script lang="ts">
-import ArticleList from '../components/article/ArticleList.vue'
+import BarChart from '@/components/chart/chart-js/BarChart.vue'
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'HomeView',
   components: {
-    ArticleList
+    BarChart
   },
   data() {
     return {
@@ -27,6 +27,6 @@ export default defineComponent({
 
 <template>
   <main>
-    <article-list :articles="articles" />
+    <BarChart />
   </main>
 </template>
