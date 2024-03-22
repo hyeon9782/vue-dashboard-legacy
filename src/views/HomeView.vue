@@ -1,6 +1,7 @@
 <script lang="ts">
 import DonutChart from '../components/chart/apex-chart/DonutChart.vue'
 import BarChart from '../components/chart/chart-js/BarChart.vue'
+import AreaChart from '../components/chart/d3-js/AreaChart.vue'
 import LineChart from '../components/chart/high-chart/LineChart.vue'
 import { defineComponent } from 'vue'
 export default defineComponent({
@@ -8,21 +9,15 @@ export default defineComponent({
   components: {
     BarChart,
     LineChart,
-    DonutChart
+    DonutChart,
+    AreaChart
   },
   data() {
     return {
-      articles: [
-        {
-          id: 1,
-          title: '첫 번째 게시글',
-          content: '안녕하세요, Vue 3와 TypeScript를 사용한 게시글 목록입니다.'
-        },
-        {
-          id: 2,
-          title: '두 번째 게시글',
-          content: '이 컴포넌트는 ArticleList 컴포넌트와 ArticleItem 컴포넌트로 구성됩니다.'
-        }
+      data: [
+        { date: new Date(2023, 0, 1), value: 10 },
+        { date: new Date(2023, 1, 1), value: 20 },
+        { date: new Date(2023, 2, 1), value: 30 }
       ]
     }
   }
@@ -32,6 +27,7 @@ export default defineComponent({
 <template>
   <main>
     <DonutChart />
+    <AreaChart :data="data" />
     <!-- <BarChart />
     <LineChart /> -->
   </main>
