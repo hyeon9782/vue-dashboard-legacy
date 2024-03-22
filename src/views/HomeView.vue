@@ -1,10 +1,12 @@
 <script lang="ts">
-import BarChart from '@/components/chart/chart-js/BarChart.vue'
+import BarChart from '../components/chart/chart-js/BarChart.vue'
+import LineChart from '../components/chart/high-chart/LineChart.vue'
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'HomeView',
   components: {
-    BarChart
+    BarChart,
+    LineChart
   },
   data() {
     return {
@@ -28,5 +30,6 @@ export default defineComponent({
 <template>
   <main>
     <BarChart />
+    <LineChart />
   </main>
 </template>
