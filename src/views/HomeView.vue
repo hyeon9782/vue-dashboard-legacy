@@ -1,4 +1,5 @@
 <script lang="ts">
+import DonutChart from '../components/chart/apex-chart/DonutChart.vue'
 import BarChart from '../components/chart/chart-js/BarChart.vue'
 import LineChart from '../components/chart/high-chart/LineChart.vue'
 import { defineComponent } from 'vue'
@@ -6,7 +7,8 @@ export default defineComponent({
   name: 'HomeView',
   components: {
     BarChart,
-    LineChart
+    LineChart,
+    DonutChart
   },
   data() {
     return {
@@ -29,7 +31,8 @@ export default defineComponent({
 
 <template>
   <main>
-    <BarChart />
-    <LineChart />
+    <DonutChart />
+    <!-- <BarChart />
+    <LineChart /> -->
   </main>
 </template>
