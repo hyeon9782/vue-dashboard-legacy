@@ -3,7 +3,8 @@ import DonutChart from '../components/chart/apex-chart/DonutChart.vue'
 import BarChart from '../components/chart/chart-js/BarChart.vue'
 import AreaChart from '../components/chart/d3-js/AreaChart.vue'
 import LineChart from '../components/chart/high-chart/LineChart.vue'
-import Modal from '../components/common/Modal.vue'
+import Button from '../components/common/Button/Button.vue'
+import Modal from '../components/common/Modal/Modal.vue'
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'HomeView',
@@ -12,7 +13,8 @@ export default defineComponent({
     LineChart,
     DonutChart,
     AreaChart,
-    Modal
+    Modal,
+    Button
   },
   data() {
     return {
@@ -39,7 +41,8 @@ export default defineComponent({
   <main>
     <DonutChart />
     <AreaChart :data="data" />
-    <button @click="openModal">Modal</button>
+    <Button :onClick="openModal">모달</Button>
+
     <Modal :show="show" :closeModal="closeModal">
       <div>모달</div>
     </Modal>
