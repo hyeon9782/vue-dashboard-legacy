@@ -21,8 +21,12 @@ export default defineComponent({
   },
   methods: {
     handleClickOutside(event: MouseEvent) {
+      console.log('클릭')
+
       const clickedElement = event.target as HTMLElement
       if (clickedElement.closest('.modal-content')) {
+        console.log('클릭2')
+
         this.closeModal()
       }
     }
